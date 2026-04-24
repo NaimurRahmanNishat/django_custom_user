@@ -33,3 +33,12 @@ First, clone the repository to your local machine:
 https://github.com/NaimurRahmanNishat/django_custom_user.git
 cd django_custom_user
 ```
+
+## Setting Up the Virtual Environment
+It is recommended to use a virtual environment to keep dependencies isolated.
+
+On Windows:
+```bash
+python -m venv myenv
+source myenv/Scripts/activate (using git bash)
+```
