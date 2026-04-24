@@ -1,82 +1,35 @@
-# django_custom_user
-# Django Project Name
+# Django Custom User Project
 
-A brief description of what this project does and who it's for.
+This project implements a **Custom User Model** in Django, replacing the default Django User model. This is a best practice for Django projects, allowing for more flexibility (like using an Email instead of a Username for login) and adding custom fields to user profiles from the start.
 
 ## Table of Contents
+- [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Setting Up the Virtual Environment](#setting-up-the-virtual-environment)
 - [Database Migrations](#database-migrations)
-- [Running the Project](#running-server)
+- [Running the Server](#running-the-server)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
 ---
 
-## Prerequisites
+## Features
+* **Custom User Model:** Inherits from `AbstractUser` or `AbstractBaseUser`.
+* **Email Authentication:** Configured to use Email as the primary unique identifier.
+* **Scalability:** Easily add extra fields (e.g., date of birth, profile picture) to the User model.
+* **Admin Integration:** Custom User admin interface to manage users easily.
 
-Before you begin, ensure you have met the following requirements:
-* You have installed **Python 3.x**
-* You have **Git** installed on your system.
-* Basic understanding of Django framework.
+## Prerequisites
+Before you begin, ensure you have:
+* **Python 3.8+** installed.
+* **Git** installed on your system.
+* A basic understanding of the Django framework and its authentication system.
 
 ## Installation
-
-First, clone the repository from GitHub:
+First, clone the repository to your local machine:
 
 ```bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
-Setting Up the Virtual Environment
-It is recommended to use a virtual environment to keep dependencies isolated.
-
-On Windows:
-Bash
-python -m venv venv
-venv\Scripts\activate
-On macOS/Linux:
-Bash
-python3 -m venv venv
-source venv/bin/activate
-Install Dependencies:
-Bash
-pip install -r requirements.txt
-Database Migrations
-After installing the requirements, you need to apply migrations to set up your local database.
-
-Bash
-python manage.py makemigrations
-python manage.py migrate
-(Optional) Create a superuser to access the admin panel:
-
-Bash
-python manage.py createsuperuser
-Running the Server
-To start the development server, run the following command:
-
-Bash
-python manage.py runserver
-Now, you can access the project at http://127.0.0.1:8000/.
-
-Usage
-Describe how to use your application here.
-
-Mention the main features.
-
-Provide any specific login credentials if needed for testing.
-
-Contributing
-Contributions are always welcome!
-
-Fork the project.
-
-Create your feature branch (git checkout -b feature/NewFeature).
-
-Commit your changes (git commit -m 'Add some NewFeature').
-
-Push to the branch (git push origin feature/NewFeature).
-
-Open a Pull Request.
-
-Created by Your Name
+git clone https://github.com/NaimurRahmanNishat/django_custom_user
+cd django_custom_user
+```
