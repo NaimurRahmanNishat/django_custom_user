@@ -42,3 +42,52 @@ On Windows:
 python -m venv myenv
 source myenv/Scripts/activate (using git bash)
 ```
+
+On macOS/Linux:
+```bash
+python -m venv myenv
+source myenv/bin/activate (using git bash)
+```
+
+Install Dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Database Migrations
+Since this project uses a custom user model, applying migrations is crucial for setting up the authentication tables correctly.
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Create a Superuser to access the Django Admin panel:
+```bash
+python manage.py createsuperuser
+```
+
+## Running the Server
+To start the development server, run:
+```bash
+python manage.py runserver
+```
+You can now access the project at http://127.0.0.1:8000/.
+
+## Usage
+1. **Admin Panel:** Go to http://127.0.0.1:8000/admin and log in with your superuser credentials.
+2. **User Management:** Notice how the user model behaves differently than the default (e.g., using Email instead of Username).
+3. **Customization:** To add more fields, check the `models.py` file in your users app.
+
+## Contributing
+Contributions are always welcome! 
+
+1. **Fork** the project.
+2. **Create** your feature branch:  
+   `git checkout -b feature/NewFeature`
+3. **Commit** your changes:  
+   `git commit -m 'Add some NewFeature'`
+4. **Push** to the branch:  
+   `git push origin feature/NewFeature`
+5. **Open** a Pull Request.
+
+Created by [Naimur Rahman Nishat] [GitHub Profile](https://github.com/NaimurRahmanNishat)
