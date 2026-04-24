@@ -30,6 +30,6 @@ Before you begin, ensure you have:
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/NaimurRahmanNishat/django_custom_user
+https://github.com/NaimurRahmanNishat/django_custom_user.git
 cd django_custom_user
 ```
