@@ -75,7 +75,18 @@
               <input type="text" class="form-control" id="education" name="education" />
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            {% comment %} error message show {% endcomment %}
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  {{ message }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              {% endfor %}
+            {% endif %}
+
+            <button type="submit" class="btn btn-primary">Sign up</button>
+            <p>You have already account <a href="{% url 'signin' %}">Sign in</a></p>
           </form>
         </div>
       </div>

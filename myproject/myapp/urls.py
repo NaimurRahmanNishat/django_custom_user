@@ -3,6 +3,8 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path("", signup, name='signup'),
-    path("signin/", signin, name='signin')
+    path("", signin, name='signin'),
+    path("signup/", signup, name='signup'),
+    path("signout/", signout, name='signout'),
+    path("dashboard/", dashboard, name='dashboard'),
 ]

@@ -117,6 +117,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+LOGIN_URL = 'signin'
+
 AUTH_USER_MODEL = 'myapp.CustomUserModel'
 
 STATICFILES_DIRS = [

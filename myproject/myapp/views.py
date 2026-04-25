@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
 from myapp.models import *
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 # Create your views here.
 def signup (request):
@@ -24,11 +27,38 @@ def signup (request):
             user.Education = education
 
             user.save()
+            messages.success(request, "Registration successful!")
             return redirect('signin')
         else:
+            messages.error(request, "Passwords do not match!")
             return redirect('signin')
     return render (request, 'signup.html')
 
 
 def signin(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(username=username, password=password)
+        if user is None:
+            # display error message
+            messages.error(request, "Invalid Password")
+            return redirect('signin')
+        else:
+            login(request, user)
+            return redirect('dashboard')
+
     return render (request, 'signin.html')
+
+
+@login_required
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+
+
+def signout(request):
+    logout(request)
+    messages.info(request, "You have successfully logged out.")
+    return redirect('signin')
