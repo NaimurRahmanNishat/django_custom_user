@@ -49,6 +49,11 @@ python -m venv myenv
 source myenv/bin/activate 
 ```
 
+Installation django
+```bash
+pip install django
+```
+
 Install Dependencies:
 ```bash
 pip install -r requirements.txt
